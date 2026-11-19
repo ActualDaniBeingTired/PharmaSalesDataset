@@ -1,0 +1,86 @@
+[2026-09-29T02:37:35.327+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-09-29T02:37:35.353+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pharma_sales_etl.run_pharma_etl manual__2026-09-29T02:37:34.176685+00:00 [queued]>
+[2026-09-29T02:37:35.363+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pharma_sales_etl.run_pharma_etl manual__2026-09-29T02:37:34.176685+00:00 [queued]>
+[2026-09-29T02:37:35.365+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-09-29T02:37:35.381+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): run_pharma_etl> on 2026-09-29 02:37:34.176685+00:00
+[2026-09-29T02:37:35.415+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pharma_sales_etl', 'run_pharma_etl', 'manual__2026-09-29T02:37:34.176685+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/PharmaSalesETL.py', '--cfg-path', '/tmp/tmp6h9sh6mp']
+[2026-09-29T02:37:35.420+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask run_pharma_etl
+[2026-09-29T02:37:35.422+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=189) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-29T02:37:35.423+0000] {standard_task_runner.py:72} INFO - Started process 193 to run task
+[2026-09-29T02:37:35.503+0000] {task_command.py:467} INFO - Running <TaskInstance: pharma_sales_etl.run_pharma_etl manual__2026-09-29T02:37:34.176685+00:00 [running]> on host 0ab171ff2c56
+[2026-09-29T02:37:35.604+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pharma_sales_etl' AIRFLOW_CTX_TASK_ID='run_pharma_etl' AIRFLOW_CTX_EXECUTION_DATE='2026-09-29T02:37:34.176685+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-29T02:37:34.176685+00:00'
+[2026-09-29T02:37:35.606+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-09-29T02:37:35.621+0000] {logging_mixin.py:190} INFO - ================================
+[2026-09-29T02:37:35.622+0000] {logging_mixin.py:190} INFO - PHARMA SALES ETL PIPELINE
+[2026-09-29T02:37:35.623+0000] {logging_mixin.py:190} INFO - ================================
+[2026-09-29T02:37:35.641+0000] {logging_mixin.py:190} INFO - Data successfully extracted.
+[2026-09-29T02:37:35.642+0000] {logging_mixin.py:190} INFO - Rows: 2106
+[2026-09-29T02:37:35.642+0000] {logging_mixin.py:190} INFO - Columns: 13
+[2026-09-29T02:37:35.643+0000] {logging_mixin.py:190} INFO - 
+===== TRANSFORMATION =====
+[2026-09-29T02:37:35.653+0000] {logging_mixin.py:190} INFO - Date converted successfully.
+[2026-09-29T02:37:35.672+0000] {logging_mixin.py:190} INFO - Wide format converted to long format.
+[2026-09-29T02:37:35.673+0000] {logging_mixin.py:190} INFO - 
+Transformed columns:
+[2026-09-29T02:37:35.674+0000] {logging_mixin.py:190} INFO - ['sale_date', 'year', 'month', 'hour', 'weekday', 'drug_code', 'sales']
+[2026-09-29T02:37:35.675+0000] {logging_mixin.py:190} INFO - 
+Transformed shape:
+[2026-09-29T02:37:35.676+0000] {logging_mixin.py:190} INFO - (16848, 7)
+[2026-09-29T02:37:35.676+0000] {logging_mixin.py:190} INFO - 
+First 5 transformed rows:
+[2026-09-29T02:37:35.685+0000] {logging_mixin.py:190} INFO -    sale_date  year  month  hour   weekday drug_code  sales
+0 2014-01-02  2014      1   248  Thursday     M01AB   0.00
+1 2014-01-02  2014      1   248  Thursday     M01AE   3.67
+2 2014-01-02  2014      1   248  Thursday     N02BA   3.40
+3 2014-01-02  2014      1   248  Thursday     N02BE  32.40
+4 2014-01-02  2014      1   248  Thursday      N05B   7.00
+[2026-09-29T02:37:35.686+0000] {logging_mixin.py:190} INFO - 
+===== DATA VALIDATION =====
+[2026-09-29T02:37:35.688+0000] {logging_mixin.py:190} INFO - 
+Missing values:
+[2026-09-29T02:37:35.689+0000] {logging_mixin.py:190} INFO - sale_date    0
+year         0
+month        0
+hour         0
+weekday      0
+drug_code    0
+sales        0
+dtype: int64
+[2026-09-29T02:37:35.693+0000] {logging_mixin.py:190} INFO - 
+Duplicate rows: 0
+[2026-09-29T02:37:35.695+0000] {logging_mixin.py:190} INFO - 
+Negative sales values: 0
+[2026-09-29T02:37:35.696+0000] {logging_mixin.py:190} INFO - 
+Drug codes:
+[2026-09-29T02:37:35.697+0000] {logging_mixin.py:190} INFO - ['M01AB' 'M01AE' 'N02BA' 'N02BE' 'N05B' 'N05C' 'R03' 'R06']
+[2026-09-29T02:37:35.698+0000] {logging_mixin.py:190} INFO - 
+Date range:
+[2026-09-29T02:37:35.699+0000] {logging_mixin.py:190} INFO - 2014-01-02 00:00:00 to 2019-10-08 00:00:00
+[2026-09-29T02:37:35.700+0000] {logging_mixin.py:190} INFO - 
+Sales statistics:
+[2026-09-29T02:37:35.704+0000] {logging_mixin.py:190} INFO - count    16848.000000
+mean         7.573332
+std         10.895998
+min          0.000000
+25%          1.817750
+50%          4.000000
+75%          8.000000
+max        161.000000
+Name: sales, dtype: float64
+[2026-09-29T02:37:35.705+0000] {logging_mixin.py:190} INFO - 
+Validation passed.
+[2026-09-29T02:37:35.706+0000] {logging_mixin.py:190} INFO - 
+===== LOADING DATA =====
+[2026-09-29T02:37:36.578+0000] {logging_mixin.py:190} INFO - 16848 rows loaded into staging table.
+[2026-09-29T02:37:36.585+0000] {logging_mixin.py:190} INFO - dim_drug updated.
+[2026-09-29T02:37:36.597+0000] {logging_mixin.py:190} INFO - dim_date updated.
+[2026-09-29T02:37:36.969+0000] {logging_mixin.py:190} INFO - fact_sales_dw rebuilt.
+[2026-09-29T02:37:36.970+0000] {logging_mixin.py:190} INFO - 16848 rows loaded into data warehouse.
+[2026-09-29T02:37:36.971+0000] {logging_mixin.py:190} INFO - 
+ETL pipeline completed successfully.
+[2026-09-29T02:37:36.972+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-09-29T02:37:36.989+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-09-29T02:37:36.990+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=pharma_sales_etl, task_id=run_pharma_etl, run_id=manual__2026-09-29T02:37:34.176685+00:00, execution_date=20260929T023734, start_date=20260929T023735, end_date=20260929T023736
+[2026-09-29T02:37:37.045+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-09-29T02:37:37.065+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-29T02:37:37.069+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

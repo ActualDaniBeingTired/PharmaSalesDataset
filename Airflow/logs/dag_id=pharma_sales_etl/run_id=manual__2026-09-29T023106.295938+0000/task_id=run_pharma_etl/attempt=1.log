@@ -1,0 +1,194 @@
+[2026-09-29T02:31:07.776+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-09-29T02:31:07.794+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pharma_sales_etl.run_pharma_etl manual__2026-09-29T02:31:06.295938+00:00 [queued]>
+[2026-09-29T02:31:07.801+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pharma_sales_etl.run_pharma_etl manual__2026-09-29T02:31:06.295938+00:00 [queued]>
+[2026-09-29T02:31:07.802+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-09-29T02:31:07.814+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): run_pharma_etl> on 2026-09-29 02:31:06.295938+00:00
+[2026-09-29T02:31:07.835+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pharma_sales_etl', 'run_pharma_etl', 'manual__2026-09-29T02:31:06.295938+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/PharmaSalesETL.py', '--cfg-path', '/tmp/tmps9vs_ipj']
+[2026-09-29T02:31:07.838+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask run_pharma_etl
+[2026-09-29T02:31:07.838+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=181) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-29T02:31:07.840+0000] {standard_task_runner.py:72} INFO - Started process 183 to run task
+[2026-09-29T02:31:07.896+0000] {task_command.py:467} INFO - Running <TaskInstance: pharma_sales_etl.run_pharma_etl manual__2026-09-29T02:31:06.295938+00:00 [running]> on host f223392007e1
+[2026-09-29T02:31:07.976+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pharma_sales_etl' AIRFLOW_CTX_TASK_ID='run_pharma_etl' AIRFLOW_CTX_EXECUTION_DATE='2026-09-29T02:31:06.295938+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-29T02:31:06.295938+00:00'
+[2026-09-29T02:31:07.977+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-09-29T02:31:07.990+0000] {logging_mixin.py:190} INFO - ================================
+[2026-09-29T02:31:07.991+0000] {logging_mixin.py:190} INFO - PHARMA SALES ETL PIPELINE
+[2026-09-29T02:31:07.991+0000] {logging_mixin.py:190} INFO - ================================
+[2026-09-29T02:31:08.008+0000] {logging_mixin.py:190} INFO - Data successfully extracted.
+[2026-09-29T02:31:08.009+0000] {logging_mixin.py:190} INFO - Rows: 2106
+[2026-09-29T02:31:08.010+0000] {logging_mixin.py:190} INFO - Columns: 13
+[2026-09-29T02:31:08.010+0000] {logging_mixin.py:190} INFO - 
+===== TRANSFORMATION =====
+[2026-09-29T02:31:08.020+0000] {logging_mixin.py:190} INFO - Date converted successfully.
+[2026-09-29T02:31:08.040+0000] {logging_mixin.py:190} INFO - Wide format converted to long format.
+[2026-09-29T02:31:08.041+0000] {logging_mixin.py:190} INFO - 
+Transformed columns:
+[2026-09-29T02:31:08.041+0000] {logging_mixin.py:190} INFO - ['sale_date', 'year', 'month', 'hour', 'weekday', 'drug_code', 'sales']
+[2026-09-29T02:31:08.042+0000] {logging_mixin.py:190} INFO - 
+Transformed shape:
+[2026-09-29T02:31:08.043+0000] {logging_mixin.py:190} INFO - (16848, 7)
+[2026-09-29T02:31:08.043+0000] {logging_mixin.py:190} INFO - 
+First 5 transformed rows:
+[2026-09-29T02:31:08.055+0000] {logging_mixin.py:190} INFO -    sale_date  year  month  hour   weekday drug_code  sales
+0 2014-01-02  2014      1   248  Thursday     M01AB   0.00
+1 2014-01-02  2014      1   248  Thursday     M01AE   3.67
+2 2014-01-02  2014      1   248  Thursday     N02BA   3.40
+3 2014-01-02  2014      1   248  Thursday     N02BE  32.40
+4 2014-01-02  2014      1   248  Thursday      N05B   7.00
+[2026-09-29T02:31:08.056+0000] {logging_mixin.py:190} INFO - 
+===== DATA VALIDATION =====
+[2026-09-29T02:31:08.058+0000] {logging_mixin.py:190} INFO - 
+Missing values:
+[2026-09-29T02:31:08.059+0000] {logging_mixin.py:190} INFO - sale_date    0
+year         0
+month        0
+hour         0
+weekday      0
+drug_code    0
+sales        0
+dtype: int64
+[2026-09-29T02:31:08.063+0000] {logging_mixin.py:190} INFO - 
+Duplicate rows: 0
+[2026-09-29T02:31:08.064+0000] {logging_mixin.py:190} INFO - 
+Negative sales values: 0
+[2026-09-29T02:31:08.065+0000] {logging_mixin.py:190} INFO - 
+Drug codes:
+[2026-09-29T02:31:08.066+0000] {logging_mixin.py:190} INFO - ['M01AB' 'M01AE' 'N02BA' 'N02BE' 'N05B' 'N05C' 'R03' 'R06']
+[2026-09-29T02:31:08.067+0000] {logging_mixin.py:190} INFO - 
+Date range:
+[2026-09-29T02:31:08.068+0000] {logging_mixin.py:190} INFO - 2014-01-02 00:00:00 to 2019-10-08 00:00:00
+[2026-09-29T02:31:08.069+0000] {logging_mixin.py:190} INFO - 
+Sales statistics:
+[2026-09-29T02:31:08.072+0000] {logging_mixin.py:190} INFO - count    16848.000000
+mean         7.573332
+std         10.895998
+min          0.000000
+25%          1.817750
+50%          4.000000
+75%          8.000000
+max        161.000000
+Name: sales, dtype: float64
+[2026-09-29T02:31:08.073+0000] {logging_mixin.py:190} INFO - 
+Validation passed.
+[2026-09-29T02:31:08.073+0000] {logging_mixin.py:190} INFO - 
+===== LOADING DATA =====
+[2026-09-29T02:31:08.093+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/src/ETL.py", line 23, in run_pipeline
+    load_data(df)
+  File "/opt/airflow/src/Load.py", line 27, in load_data
+    engine = create_engine(connection_string)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 514, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/url.py", line 738, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/url.py", line 794, in _parse_url
+    components["port"] = int(components["port"])
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'None'
+[2026-09-29T02:31:08.113+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=pharma_sales_etl, task_id=run_pharma_etl, run_id=manual__2026-09-29T02:31:06.295938+00:00, execution_date=20260929T023106, start_date=20260929T023107, end_date=20260929T023108
+[2026-09-29T02:31:08.141+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-09-29T02:31:08.142+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 8 for task run_pharma_etl (invalid literal for int() with base 10: 'None'; 183)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/src/ETL.py", line 23, in run_pipeline
+    load_data(df)
+  File "/opt/airflow/src/Load.py", line 27, in load_data
+    engine = create_engine(connection_string)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 514, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/url.py", line 738, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/url.py", line 794, in _parse_url
+    components["port"] = int(components["port"])
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'None'
+[2026-09-29T02:31:08.175+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-09-29T02:31:08.191+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-29T02:31:08.195+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

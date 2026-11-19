@@ -1,0 +1,27 @@
+[2026-11-19T08:23:17.698+0000] {processor.py:186} INFO - Started process (PID=174) to work on /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:23:17.700+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/PharmaSalesETL.py for tasks to queue
+[2026-11-19T08:23:17.707+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:23:17.704+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:23:21.975+0000] {processor.py:925} INFO - DAG(s) 'pharma_sales_etl' retrieved from /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:23:22.042+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:23:22.041+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-11-19T08:23:22.106+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/PharmaSalesETL.py took 4.447 seconds
+[2026-11-19T08:23:52.410+0000] {processor.py:186} INFO - Started process (PID=189) to work on /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:23:52.412+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/PharmaSalesETL.py for tasks to queue
+[2026-11-19T08:23:52.417+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:23:52.417+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:23:53.174+0000] {processor.py:925} INFO - DAG(s) 'pharma_sales_etl' retrieved from /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:23:53.216+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:23:53.215+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-11-19T08:23:53.252+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:23:53.252+0000] {dag.py:4180} INFO - Setting next_dagrun for pharma_sales_etl to 2026-11-19 00:00:00+00:00, run_after=2026-11-20 00:00:00+00:00
+[2026-11-19T08:23:53.284+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/PharmaSalesETL.py took 0.884 seconds
+[2026-11-19T08:24:23.566+0000] {processor.py:186} INFO - Started process (PID=195) to work on /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:24:23.568+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/PharmaSalesETL.py for tasks to queue
+[2026-11-19T08:24:23.573+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:24:23.573+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:24:24.286+0000] {processor.py:925} INFO - DAG(s) 'pharma_sales_etl' retrieved from /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:24:24.317+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:24:24.316+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-11-19T08:24:24.346+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:24:24.346+0000] {dag.py:4180} INFO - Setting next_dagrun for pharma_sales_etl to 2026-11-19 00:00:00+00:00, run_after=2026-11-20 00:00:00+00:00
+[2026-11-19T08:24:24.370+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/PharmaSalesETL.py took 0.813 seconds
+[2026-11-19T08:24:54.630+0000] {processor.py:186} INFO - Started process (PID=201) to work on /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:24:54.632+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/PharmaSalesETL.py for tasks to queue
+[2026-11-19T08:24:54.635+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:24:54.635+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:24:55.345+0000] {processor.py:925} INFO - DAG(s) 'pharma_sales_etl' retrieved from /opt/airflow/dags/PharmaSalesETL.py
+[2026-11-19T08:24:55.374+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:24:55.374+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-11-19T08:24:55.403+0000] {logging_mixin.py:190} INFO - [2026-11-19T08:24:55.403+0000] {dag.py:4180} INFO - Setting next_dagrun for pharma_sales_etl to 2026-11-19 00:00:00+00:00, run_after=2026-11-20 00:00:00+00:00
+[2026-11-19T08:24:55.437+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/PharmaSalesETL.py took 0.814 seconds
